@@ -6,10 +6,13 @@
 
 文本图形，支持富文本。
 
-
 ![](../static/fig-text.jpg)
 
 文本图形的属性非常多，这里只介绍一些常用的。
+
+## 基本属性
+
+见 [图形基本属性](/graphics/basic)。
 
 ## textAlignHorizontal
 

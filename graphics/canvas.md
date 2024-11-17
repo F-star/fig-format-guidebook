@@ -4,8 +4,11 @@
 
 Figma 下可以有多个画布，类似 Excel 的 sheet，浏览器的多 tab 页。
 
-
 ![](../static/fig-canvas-graphics.jpg)
+
+## 基本属性
+
+见 [图形基本属性](/graphics/basic)。
 
 ## backgroundColor
 

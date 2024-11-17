@@ -14,6 +14,10 @@ export default defineConfig({
 
     sidebar: [
       {
+        text: '简介',
+        link: '/introduction',
+      },
+      {
         text: '基本图形',
         items: [
           { text: '图形基本属性', link: '/graphics/basic' },

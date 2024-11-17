@@ -8,6 +8,10 @@ Vector 是 Figma 的一种特殊的矢量网格（vector network）图形，类�
 
 比如双击矩形，给它加一个路径点，然后确认，此时其实它就不再是矩形了，而是矢量网格了。或执行 Flatten 命令。
 
+## 基本属性
+
+见 [图形基本属性](/graphics/basic)。
+
 ## vectorData
 
 矢量数据。
