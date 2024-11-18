@@ -8,5 +8,5 @@
 
 <img 
   width="400px"
-  src="./static/gzh_xigua.jpg" 
+  src="../static/gzh_xigua.jpg" 
 />

@@ -15,7 +15,7 @@ hero:
     #   link: /api-examples
     - theme: brand
       text: 基本图形
-      link: /basic-graphics
+      link: /start/introduction
 
 # features:
 #   - title: Feature A

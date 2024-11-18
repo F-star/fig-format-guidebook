@@ -53,11 +53,26 @@ fig 的数据结构是拍平的一维数组，加载时需要根据 parentIndex 
 
 ## size
 
-一个对象，x 为宽，y 为高。属性名不是 width 和 height，大概因为用了矢量结构体；
+一个对象，x 为宽，y 为高。属性名不是 width 和 height，因为用了矢量结构体。
 
 ## transform
 
-一个表达 3x3 矩阵的对象，会对节点进行矩阵变换；
+一个表达 3x3 矩阵的对象，会对节点进行矩阵变换。
+
+```json
+"transform": {
+  "m00": 1, "m01": 3, "m02": 5,
+  "m10": 2, "m11": 4, "m12": 6
+}
+```
+
+对应矩阵为：
+
+```
+m00 | m01 | m02
+m10 | m11 | m12
+ 0  |  0  |  1
+```
 
 [size 和 transform 可以表达一个变形的矩形，包括位移、旋转、翻转、斜切等。](https://mp.weixin.qq.com/s?__biz=MzI0NTc2NTEyNA==&mid=2247487721&idx=1&sn=3b9d8f1c28a4b74d998ad27c9ab12366&chksm=e948d582de3f5c941f96cb5b97878d41662b4e456a65da02249e409b66870463e4647f7bdbce&token=312140289&lang=zh_CN&scene=21#wechat_redirect)
 
@@ -67,9 +82,11 @@ fig 的数据结构是拍平的一维数组，加载时需要根据 parentIndex 
 
 是否锁定宽高比。
 
-如果为 true，输入框修改宽时，高会自动更新，保持原来的宽高比，反之同理。
+如果为 true，在输入框修改宽或高时，另一个属性会自动更新，以保持和修改前的宽高比一致。
 
-![alt text](../static/fig-proportionsConstrained-prop.jpg)
+通过图形上的控制点 resize 图形时，不会受到高属性影响。
+
+![](../static/fig-proportionsConstrained-prop.jpg)
 
 ## cornerRadius
 
@@ -77,11 +94,13 @@ fig 的数据结构是拍平的一维数组，加载时需要根据 parentIndex 
 
 ## cornerSmoothing
 
-平滑圆角程度。其中 60% 对应 iOS 图标的平滑程度；
+平滑圆角程度。
+
+其中 60% 对应 iOS 图标的平滑程度。
 
 ## horizontalConstraint / verticalConstraint
 
-图形的水平和垂直约束，指定在 frame（画框）缩放时图形缩放或移动的方式。
+图形的水平和垂直约束，指定在其父节点 [frame](./frame.md) 缩放时，图形会如何进行缩放或移动。
 
 支持的类型值有：
 
@@ -107,7 +126,7 @@ fig 的数据结构是拍平的一维数组，加载时需要根据 parentIndex 
 
 ## fillPaints
 
-比如下面是SOLID（纯色）的表示。
+比如下面是 `SOLID`（纯色）的表示。
 
 ```json
 fillPaints: [
@@ -128,7 +147,7 @@ fillPaints: [
 
 数组前面的填充会覆盖掉后面的填充。
 
-此外 Figma 还支持 IMAGE（图片）、GRADIENT_LINEAR（线性渐变）、GRADIENT_LINEAR（径向渐变）、GRADIENT_ANGULAR（旋转渐变）、GRADIENT_DIAMOND（菱形渐变）、VIDEO （视频）等 PaintType 类型。
+此外 Figma 还支持 `IMAGE`（图片）、`GRADIENT_LINEAR`（线性渐变）、`GRADIENT_LINEAR`（径向渐变）、`GRADIENT_ANGULAR`（旋转渐变）、`GRADIENT_DIAMOND`（菱形渐变）、`VIDEO` （视频）等 PaintType 类型。
 
 ![](../static/fig-paint.jpg)
 

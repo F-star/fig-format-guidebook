@@ -14,8 +14,14 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: '简介',
-        link: '/introduction',
+        text: '开始',
+        items: [
+          {
+            text: '简介',
+            link: '/start/introduction',
+          },
+          { text: 'fig 是什么？', link: '/start/fig-introduction' },
+        ]
       },
       {
         text: '基本图形',
@@ -32,10 +38,13 @@ export default defineConfig({
         ]
       },
       {
-        text: '容器类图形',
+        text: '容器图形',
         items: [
           { text: '文档', link: '/graphics/document' },
           { text: '画布', link: '/graphics/canvas' },
+          { text: '图框', link: '/graphics/frame' },
+          { text: '组件', link: '/graphics/symbol' },
+          { text: '组件实例', link: '/graphics/instance' },
         ]
       }
       // {
