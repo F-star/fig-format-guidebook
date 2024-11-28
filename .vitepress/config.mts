@@ -5,6 +5,7 @@ export default defineConfig({
   title: "fig 格式说明书",
   description: "对 fig 文件的详尽分析讲解",
   lang: "zh-CN",
+  base: "/fig-format-guidebook/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
