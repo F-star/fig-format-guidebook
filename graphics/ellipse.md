@@ -19,7 +19,7 @@
 
 两个 angle 的弧度值范围为 `[0, PI*2)`，方向为顺时针，基准方向为正右（对应向量为 `(1, 0)`）。
 
-![](../static/ellipse-arc.png)
+![](../static/fig-polar-coord.jpg)
 
 对应的 UI 层属性为 start、sweep 和 ratio。
 

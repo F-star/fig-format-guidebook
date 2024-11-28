@@ -12,7 +12,7 @@
 
 ## 基本属性
 
-见 [图形基本属性](/graphics/basic)。
+见 [图形基本属性](./basic)。
 
 ## textAlignHorizontal
 
@@ -47,7 +47,7 @@
 
 ## autoRename
 
-自动重命名，默认为 true，此时图形的[名称](./graphics#name)会自定跟随文本内容更新。
+自动重命名，默认为 true，此时图形的[名称](./basic#name)会自定跟随文本内容更新。
 
 ## textAutoResize
 
