@@ -1,5 +1,7 @@
 # 着色 paint
 
+> WIP
+
 ## 纯色
 
 `SOLID`

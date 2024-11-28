@@ -14,7 +14,7 @@ hero:
     #   text: API Examples
     #   link: /api-examples
     - theme: brand
-      text: 基本图形
+      text: 开始
       link: /start/introduction
 
 # features:

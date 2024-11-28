@@ -12,8 +12,10 @@ guid：图形 id 对象，用于唯一标识图形。
 
 ```json
 {
-  "sessionID": 1,
-  "localID": 7
+  "guid": {
+    "sessionID": 1,
+    "localID": 7
+  }
 }
 ```
 
@@ -235,6 +237,29 @@ effect（效果）数组。
 
 默认是 ALPHA （基于透明度），此外还有 VECTOR（基于图形轮廓线）、LUMINANCE（基于明度）；
 
-<!-- ## 参考
+## styleIdForFill
 
-1. [Figma REST API](https://www.figma.com/developers/api#node-types) -->
+填充使用的样式 id。
+
+例：
+
+```json
+{
+  "styleIdForFill": {
+    "guid": {
+      "sessionID": 2,
+      "localID": 4
+    }
+  }
+}
+```
+
+## styleIdForStrokeFill
+
+描边填充使用的样式 id。类似 styleIdForFill。
+
+虽然可能很奇怪，但它的末尾就是有个 Fill。
+
+## styleIdForEffect
+
+effect（特效）使用的样式 id。类似 styleIdForFill。

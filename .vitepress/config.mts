@@ -46,7 +46,16 @@ export default defineConfig({
           { text: '组件', link: '/graphics/symbol' },
           { text: '组件实例', link: '/graphics/instance' },
         ]
+      },
+      {
+        text: '样式和变体',
+        items: [
+          { text: '样式', link: '/variable/style' },
+          { text: '变量集', link: '/variable/variable-set' },
+          { text: '变量', link: '/variable/variable' },
+        ]
       }
+      
       // {
       //   text: '其他',
       //   items: [
