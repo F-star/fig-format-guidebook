@@ -21,15 +21,27 @@ guid：图形 id 对象，用于唯一标识图形。
 
 ## parentIndex
 
-父节点 id。格式同 guid。
+父节点 id，以及当前节点在父节点下的位置。
 
 fig 的数据结构是拍平的一维数组，加载时需要根据 parentIndex 还原为图形树结构。
+
+```json
+"parentIndex": {
+  "guid": {
+    "sessionID": 0,
+    "localID": 0
+  },
+  "position": "~"
+},
+```
+
+position 使用了 [Fractional indexing](https://mp.weixin.qq.com/s?__biz=MzI0NTc2NTEyNA%3D%3D&mid=2247487763&idx=1&sn=7cb696d006d66521d4456bd4f67bec4d&chksm=e948d478de3f5d6e5f8269616453d75176bf472a6b8a6b6f1eeebce75fe0cf01f17838db7207&scene=21&cur_album_id=2965704900049485826#wechat_redirect) 的顺序一致性算法。
 
 ## type
 
 图形类型。
 
-对于矩形，type 为 `RECTANGLE`。
+比如矩形，type 为 `RECTANGLE`。
 
 ## name
 
@@ -41,7 +53,7 @@ fig 的数据结构是拍平的一维数组，加载时需要根据 parentIndex 
 
 ## locked
 
-是否锁定，锁定的图形不可选择，不可通过光标移动。
+是否被锁定，被锁定的图形不可选择，不可通过光标移动。
 
 ![](<../static/lock-visible-name.jpg>)
 
@@ -51,7 +63,35 @@ fig 的数据结构是拍平的一维数组，加载时需要根据 parentIndex 
 
 ## blendMode
 
-混合模式，表示当前节点和其下的图层以何种形式混合。默认为 PASS_THROUGH（穿透）。
+混合模式，表示当前节点和其下的图层以何种形式混合。
+
+默认为 PASS_THROUGH（穿透）。
+
+```json
+{
+  "BlendMode": {
+    "PASS_THROUGH": 0,
+    "NORMAL": 1,
+    "DARKEN": 2,
+    "MULTIPLY": 3,
+    "LINEAR_BURN": 4,
+    "COLOR_BURN": 5,
+    "LIGHTEN": 6,
+    "SCREEN": 7,
+    "LINEAR_DODGE": 8,
+    "COLOR_DODGE": 9,
+    "OVERLAY": 10,
+    "SOFT_LIGHT": 11,
+    "HARD_LIGHT": 12,
+    "DIFFERENCE": 13,
+    "EXCLUSION": 14,
+    "HUE": 15,
+    "SATURATION": 16,
+    "COLOR": 17,
+    "LUMINOSITY": 18
+  }
+}
+```
 
 ## size
 

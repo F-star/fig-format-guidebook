@@ -11,6 +11,10 @@
 
 ## rectangleTopLeftCornerRadius / rectangleTopRightCornerRadius / rectangleBottomLeftCornerRadius / rectangleBottomRightCornerRadius
 
+基础属性有个 cornerRadius 表示半径，但是是给每个角都设置为一个值。
+
+我们希望矩形可以单独设置每个圆角，所以有了这几个属性。
+
 矩形 4 个圆角半径值。
 
 - rectangleTopLeftCornerRadius：左上角圆角半径；
