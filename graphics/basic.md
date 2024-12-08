@@ -193,14 +193,57 @@ fillPaints: [
 
 ![](../static/fig-paint.jpg)
 
+## strokePaints
+
+描边色数组，和 fillPaints 一致。
 
 ## fillGeometry
 
 填充对应的 path 描述，可用于直接渲染最终结果。
 
-## strokePaints
+导出的 fig 会有这个属性（如果图形设置了填充）。但是如果是复制产生的放在剪贴板的数据，是没有这个属性的。
 
-描边色数组，和 fillPaints 一致。
+fig 使用了二进制进行封装，然后通过 styleId
+
+```json
+{
+  "fillGeometry": [
+    {
+      "windingRule": "NONZERO",
+      "commandsBlob": 65,
+      "styleID": 0
+    }
+  ],
+}
+```
+
+windingRule 表示填充的环绕规则。windingRule 的值有：
+
+```json
+{
+  "WindingRule": {
+    "NONZERO": 0, // 非零环绕规则
+    "ODD": 1 // 奇偶规则
+  },
+}
+```
+
+commandsBlob 指向 blobs 数组中的数组元素的位置，是一个二进制数据。
+
+> 只要你看到属性名末尾是 Blob，那就是一个二进制数据，数据保存在 blobs 数组中
+
+commandsBlob 解析后，会得到类似这样的数据结构：
+
+```json
+[
+  "M", 57.76496887207031, 0,
+  "L", 0, 77.54036712646484,
+  "C", 21.51007843017578, 81.70360565185547, 70.6710205078125, 86.28317260742188, 95.23413848876953, 71.29550170898438,
+  "C", 119.79725646972656, 56.30783462524414, 121.42786407470703, 17.520305633544922, 119.17277526855469, 0,
+  "L", 57.76496887207031, 0,
+  "Z"
+]
+```
 
 ## strokeGeometry
 
@@ -223,6 +266,30 @@ fillPaints: [
 描边路径两端的样式，默认为 NONE，除了经典的 SQUARE、ROUND，还有特殊的 LINE_ARROW、CIRCLE_FILLED 等值，可以产生箭头或其他特殊样式。
 
 ![](../static/fig-stroke-cap.jpg)
+
+支持的枚举值：
+
+```json
+{
+  "StrokeCap": {
+    "NONE": 0,
+    "ROUND": 1,
+    "SQUARE": 2,
+    "ARROW_LINES": 3,
+    "ARROW_EQUILATERAL": 4,
+    "DIAMOND_FILLED": 5,
+    "TRIANGLE_FILLED": 6,
+    "HIGHLIGHT": 7,
+    "WASHI_TAPE_1": 8,
+    "WASHI_TAPE_2": 9,
+    "WASHI_TAPE_3": 10,
+    "WASHI_TAPE_4": 11,
+    "WASHI_TAPE_5": 12,
+    "WASHI_TAPE_6": 13,
+    "CIRCLE_FILLED": 14
+  }
+}
+```
 
 ## strokeJoin
 
