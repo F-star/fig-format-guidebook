@@ -18,9 +18,30 @@
 
 文本左右对齐方式，默认为 "LEFT"。
 
+```json
+{
+  "TextAlignHorizontal": {
+    "LEFT": 0, // 向左对齐
+    "CENTER": 1, // 居中对齐
+    "RIGHT": 2, // 向右对齐
+    "JUSTIFIED": 3 // 两端对齐
+  }
+}
+```
+
 ## textAlignVertical
 
 文本上下对齐方式，默认为 "TOP"。
+
+```json
+{
+  "TextAlignVertical": {
+    "0": "TOP",
+    "1": "CENTER",
+    "2": "BOTTOM",
+  }
+}
+```
 
 ## lineHeight
 
