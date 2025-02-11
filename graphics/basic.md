@@ -122,11 +122,13 @@ m10 | m11 | m12
 
 ## proportionsConstrained
 
+> 最新版 figma 已替换为 [targetAspectRatio](#targetAspectRatio)
+
 是否锁定宽高比。
 
 如果为 true，在输入框修改宽或高时，另一个属性会自动更新，以保持和修改前的宽高比一致。
 
-通过图形上的控制点 resize 图形时，不会受到高属性影响。
+通过图形上的控制点 resize 图形时，不会受到该属性影响。
 
 ![](../static/fig-proportionsConstrained-prop.jpg)
 
@@ -370,3 +372,22 @@ effect（效果）数组。
 ## styleIdForEffect
 
 effect（特效）使用的样式 id。类似 styleIdForFill。
+
+## targetAspectRatio
+
+[25-02-06 新增](https://www.figma.com/release-notes/?title=aspect-ratio-locked)，算是[等了 4 年](https://forum.figma.com/suggest-a-feature-11/launched-true-aspect-ratio-lock-36138)才终于支持了。
+
+是否锁定宽高比。
+
+通过控制点对图形 resize 时，也能保持宽高比。
+
+```json
+{
+  "targetAspectRatio": {
+    "value": {
+      "x": 99,
+      "y": 31
+    }
+  }
+}
+```
