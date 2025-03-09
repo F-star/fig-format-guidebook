@@ -13,9 +13,9 @@
 
 圆弧数据。虽然类型是椭圆，但可以通过设置一些属性，表达为圆弧。
 
-- arcData.startingAngle：圆弧起始弧度。
-- arcData.endingAngle：圆弧结束弧度。
-- arcData.innerRadius：内部空心椭圆半径比椭圆半径的比值，范围 [0, 1]，可实现圆环绘制。
+- arcData.startingAngle：圆弧起始弧度，默认值为 0。
+- arcData.endingAngle：圆弧结束弧度，默认值为 6.2831854820251465（约为 PI * 2）。
+- arcData.innerRadius：内部空心椭圆半径比椭圆半径的比值，范围 [0, 1]，可实现圆环绘制，默认值为 0。
 
 两个 angle 的弧度值范围为 `[0, PI*2)`，方向为顺时针，基准方向为正右（对应向量为 `(1, 0)`）。
 
