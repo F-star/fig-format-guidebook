@@ -12,7 +12,20 @@ Figma 下可以有多个画布，类似 Excel 的 sheet，浏览器的多 tab �
 
 ## backgroundColor
 
-背景色，rgba 对象。
+背景色，rgba 对象。值的范围都是 `[0, 1]`。
+
+示例：
+
+```json
+{
+  "backgroundColor": {
+    "r": 0.9607843160629272,
+    "g": 0.9607843160629272,
+    "b": 0.9607843160629272,
+    "a": 1
+  },
+}
+```
 
 ## backgroundEnabled
 
@@ -20,7 +33,7 @@ Figma 下可以有多个画布，类似 Excel 的 sheet，浏览器的多 tab �
 
 ## exportBackgroundDisabled
 
-导出时是否不使用背景色。
+导出时是否禁用背景色。
 
 ## 结尾
 

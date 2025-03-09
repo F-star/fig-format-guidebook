@@ -68,7 +68,7 @@
 
 ## autoRename
 
-自动重命名，默认为 true，此时图形的[名称](./basic#name)会自定跟随文本内容更新。
+自动重命名，默认为 true，此时图形的[名称](./basic#name)会自动跟随文本内容的更新而更新。
 
 ## textAutoResize
 
@@ -77,3 +77,13 @@
 1. `WIDTH_AND_HEIGHT`：宽高自动根据文字内容和换行适应，默认值；
 2. `HEIGHT`：宽度固定，高度自适应；
 3. `NONE`：文字内容不会改变矩形宽高，必要时会溢出矩形。
+
+```json
+{
+  "TextAutoResize": {
+    "NONE": 0,
+    "WIDTH_AND_HEIGHT": 1,
+    "HEIGHT": 2
+  }
+}
+```
