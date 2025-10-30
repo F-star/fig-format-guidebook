@@ -59,6 +59,7 @@ export default defineConfig({
       {
         text: '通信',
         items: [
+          { text: '初始化', link: '/message/design-init' },
           { text: '更新属性', link: '/message/update-attrs' },
         ]
       }
