@@ -2,6 +2,33 @@
 
 打开一个 design 文件的消息收发流程。（这是是单人模式，没有多个用户）
 
+## 流程图
+
+```
+开始
+
+-> fig-kiwi 格式文件
+-> JOIN_START 消息 (确认用户加入房间)
+-> NODE_CHANGES 消息 (获取 design 信息)
+-> SCENE_GRAPH_REPLY 消息 (场景图响应)
+-> USER_CHANGES 消息 (用户信息)
+-> SIGNAL 消息 (服务器加载时间元数据)
+-> JOIN_END 消息 (加入结束)
+<- USER_CHANGES 消息 (客户端视口信息)
+<- CLIENT_BROADCAST 消息 (音乐状态)
+-> 各种 SIGNAL 消息 (重连密钥和序号)
+<- CLIENT_RENDERED 消息 (客户端渲染完成)
+-> CLIENT_BROADCAST 消息 (音乐和演示状态)
+-> 最终 USER_CHANGES 消息 (用户完整信息)
+
+初始化完成
+
+-> 表示接收消息
+<- 表示发送消息
+```
+
+## 具体说明
+
 1、会先接收一个 fig-kiwi 格式的文件，暂时不明如何解析。
 
 但它不影响后续的 design 初始化流程。
