@@ -55,8 +55,13 @@ export default defineConfig({
           { text: '变量集', link: '/variable/variable-set' },
           { text: '变量', link: '/variable/variable' },
         ]
+      },
+      {
+        text: '通信',
+        items: [
+          { text: '更新属性', link: '/message/update-attrs' },
+        ]
       }
-      
       // {
       //   text: '其他',
       //   items: [
